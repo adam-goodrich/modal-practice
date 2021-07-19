@@ -149,6 +149,8 @@ html {
 
 .open-btn {
   font-size: 1.2rem;
+  font-weight: 450;
+
   position: fixed;
   bottom: 60px;
   right: 70px;
@@ -196,13 +198,13 @@ html {
 
 .main-popup {
   position: absolute;
-  right: 35px;
+  right: 20px;
   bottom: 35px;
   height: 280px;
   width: 320px;
   border-radius: 10px;
   z-index: 1;
-  background: white;
+  background: #fdfeff;
   padding: 38px 30px;
   line-height: 1rem;
   transform: translateY(100%);
