@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const openButton = document.querySelector(".open-btn");
+    const popup = document.querySelector(".popup");
+    const mainPopup = document.querySelector(".main-popup");
+    const overlay = document.querySelector(".popup-overlay");
+
+    openButton.addEventListener("click", () => {
+      popup.style.opacity = 1;
+      popup.style.display = "flex";
+      mainPopup.style.cssText =
+        "animation: slide-in .5s ease; animation-fill-mode: forwards;";
+      overlay.style.cssText =
+        "animation: fade-in .5s ease; animation-fill-mode: forwards;";
+    });
+
+    overlay.addEventListener("click", () => {
+      mainPopup.style.cssText =
+        "animation: slide-out .5s ease; animation-fill-mode: forwards;";
+      overlay.style.cssText =
+        "animation: fade-out .5s ease; animation-fill-mode: forwards;";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 500);
+    });
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="btn">
+        <button type="button" className="open-btn">
+          I want help
+        </button>
+      </div>
+      <div className="popup">
+        <div className="popup-overlay"></div>
+        <div className="main-popup">
+          <div className="popup-content">
+            <p className="modal-p">Would you like to talk to someone?</p>
+            <button type="button" className="yes-no-btn">
+              Yes
+            </button>
+            <button type="button" className="yes-no-btn">
+              No
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
