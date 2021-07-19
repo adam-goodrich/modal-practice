@@ -34,6 +34,9 @@ function App() {
           I want help
         </button>
       </div>
+      <div className="main-content">
+        <h1>SOME CONTENT</h1>
+      </div>
       <div className="popup">
         <div className="popup-overlay"></div>
         <div className="main-popup">

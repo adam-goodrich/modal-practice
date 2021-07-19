@@ -136,6 +136,17 @@ html {
   width: 100%;
 }
 
+.main-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .open-btn {
   font-size: 1.2rem;
   position: fixed;
@@ -147,6 +158,7 @@ html {
   color: #aa4444;
   background-color: #ffe3e3;
   cursor: pointer;
+  z-index: 1;
 }
 
 .modal-p {
