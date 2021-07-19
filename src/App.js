@@ -41,7 +41,7 @@ function App() {
         <div className="popup-overlay"></div>
         <div className="main-popup">
           <div className="popup-content">
-            <p className="modal-p">Would you like to talk to someone?</p>
+            <p>Would you like to talk to someone?</p>
             <button type="button" className="yes-no-btn">
               Yes
             </button>
