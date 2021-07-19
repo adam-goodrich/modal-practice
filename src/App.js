@@ -1,9 +1,10 @@
 import HelpModal from "./HelpModal";
+import Login from "./Login";
 
 function App() {
   return (
     <div className="container">
-      <h1>Here is some nice content!</h1>
+      <Login />
       <HelpModal />
     </div>
   );

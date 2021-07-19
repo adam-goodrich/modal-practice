@@ -1,0 +1,71 @@
+.flex-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+.flex-child:first-child {
+  background-color: #e3f5ff;
+}
+
+.log-in-form {
+  text-align: start;
+  width: 65%;
+  height: 65vh;
+}
+
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 53px;
+  font-weight: 500;
+}
+
+.username-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.username-input {
+  margin-top: 8px;
+  margin-bottom: 48px;
+  padding: 26px 0px 17px 20px;
+  line-height: 0.9;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-color: #b5b5b5;
+  color: #6d6d6d;
+}
+
+.password-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.password-input {
+  margin-top: 8px;
+  margin-bottom: 48px;
+  padding: 26px 0px 17px 20px;
+  line-height: 0.9;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-color: #b5b5b5;
+  color: #6d6d6d;
+}
+
+.login-btn {
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #445480;
+  border-radius: 5px;
+}
