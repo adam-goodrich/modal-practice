@@ -4,7 +4,7 @@ import HelpModal from "./HelpModal";
 function App() {
   return (
     <div className="container">
-      <h1>Hello</h1>
+      <h1>Here is some nice content!</h1>
       <HelpModal />
     </div>
   );
