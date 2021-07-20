@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./HelpModal.css";
 
 const HelpModal = () => {
+  const [needHelp, setNeedHelp] = useState("unclicked");
+
   useEffect(() => {
     const openButton = document.querySelector(".open-btn");
     const popup = document.querySelector(".popup");
@@ -24,6 +26,7 @@ const HelpModal = () => {
         "animation: fade-out .5s ease; animation-fill-mode: forwards;";
       setTimeout(() => {
         popup.style.display = "none";
+        setNeedHelp("unclicked");
       }, 500);
     };
 
@@ -37,27 +40,89 @@ const HelpModal = () => {
     };
   });
 
-  return (
-    <div>
-      <button type="button" className="open-btn">
-        I want help
-      </button>
-      <div className="popup">
-        <div className="popup-overlay"></div>
-        <div className="main-popup">
-          <div className="popup-content">
-            <p>Would you like to talk to someone?</p>
-            <button type="button" className="yes-no-btn">
-              Yes
-            </button>
-            <button type="button" className="yes-no-btn">
-              No
-            </button>
+  const getHelp = () => {
+    setNeedHelp(true);
+  };
+
+  const noHelp = () => {
+    setNeedHelp(false);
+  };
+
+  if (needHelp === "unclicked") {
+    return (
+      <div>
+        <button type="button" className="open-btn">
+          I want help
+        </button>
+        <div className="popup">
+          <div className="popup-overlay"></div>
+          <div className="main-popup">
+            <div className="popup-content">
+              <p>Would you like to talk to someone?</p>
+              <button type="button" className="yes-no-btn" onClick={getHelp}>
+                Yes
+              </button>
+              <button type="button" className="yes-no-btn" onClick={noHelp}>
+                No
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else if (needHelp) {
+    return (
+      <div>
+        <button type="button" className="open-btn">
+          I want help
+        </button>
+        <div className="popup">
+          <div className="popup-overlay"></div>
+          <div className="main-popup">
+            <div className="popup-content">
+              <p>Would you like to talk to someone?</p>
+              <button type="button" className="yes-no-btn active">
+                Yes
+              </button>
+              <p className="notified">
+                We have notified XYZ. They will reach out to you imminently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  } else if (!needHelp) {
+    return (
+      <div>
+        <button type="button" className="open-btn">
+          I want help
+        </button>
+        <div className="popup">
+          <div className="popup-overlay"></div>
+          <div className="main-popup">
+            <div className="popup-content">
+              <p>Would you like to talk to someone?</p>
+              <button
+                type="button"
+                className="yes-no-btn active"
+                onClick={getHelp}>
+                No
+              </button>
+              <p className="feeling">How are you feeling?</p>
+              <button type="button" className="feeling-btn">
+                How are you feeling?
+              </button>
+              <br></br>
+              <button type="button" className="feeling-btn breath-btn">
+                Take a deep breath
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default HelpModal;
