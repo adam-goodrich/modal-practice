@@ -58,7 +58,7 @@ const HelpModal = () => {
           <div className="popup-overlay"></div>
           <div className="main-popup">
             <div className="popup-content">
-              <p>Would you like to talk to someone?</p>
+              <p className="talk-to">Would you like to talk to someone?</p>
               <button type="button" className="yes-no-btn" onClick={getHelp}>
                 Yes
               </button>
@@ -80,7 +80,7 @@ const HelpModal = () => {
           <div className="popup-overlay"></div>
           <div className="main-popup">
             <div className="popup-content">
-              <p>Would you like to talk to someone?</p>
+              <p className="talk-to">Would you like to talk to someone?</p>
               <button type="button" className="yes-no-btn active">
                 Yes
               </button>
@@ -102,11 +102,8 @@ const HelpModal = () => {
           <div className="popup-overlay"></div>
           <div className="main-popup">
             <div className="popup-content">
-              <p>Would you like to talk to someone?</p>
-              <button
-                type="button"
-                className="yes-no-btn active"
-                onClick={getHelp}>
+              <p className="talk-to">Would you like to talk to someone?</p>
+              <button type="button" className="yes-no-btn active">
                 No
               </button>
               <p className="feeling">How are you feeling?</p>
