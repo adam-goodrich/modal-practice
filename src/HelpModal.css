@@ -1,32 +1,15 @@
-.main-content {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn {
-  position: relative;
-}
-
 .open-btn {
   font-size: 1.2rem;
   font-weight: 450;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   padding: 1rem 2.8rem;
   border-radius: 30px;
   border: none;
   color: #aa4444;
   background-color: #ffe3e3;
   cursor: pointer;
-  justify-self: flex-end;
-  display: inline;
 }
 
 .yes-no-btn {
@@ -43,12 +26,9 @@
 }
 
 .popup {
-  position: relative;
   width: 100%;
   height: 100vh;
   display: none;
-  justify-content: end;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +38,6 @@
   background-color: rgba(0, 0, 0, 0.25);
   height: 100vh;
   width: 100%;
-  position: absolute;
 }
 
 .main-popup {
@@ -68,7 +47,7 @@
   height: 280px;
   width: 320px;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 999;
   background: #fdfeff;
   padding: 38px 30px;
   line-height: 1rem;

@@ -6,16 +6,8 @@
 
 .flex-child {
   flex: 1;
-  min-width: 550px;
   min-height: 500px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
+  min-width: 500px;
 }
 
 .flex-child:first-child {
@@ -64,7 +56,6 @@
 .password-label {
   font-size: 1.1rem;
   font-weight: 500;
-  margin-bottom: 20px;
 }
 
 .password-input {

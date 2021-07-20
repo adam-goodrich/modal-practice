@@ -29,12 +29,10 @@ const HelpModal = () => {
   });
 
   return (
-    <div className="btn">
-      <div>
-        <button type="button" className="open-btn">
-          I want help
-        </button>
-      </div>
+    <div>
+      <button type="button" className="open-btn">
+        I want help
+      </button>
       <div className="popup">
         <div className="popup-overlay"></div>
         <div className="main-popup">
