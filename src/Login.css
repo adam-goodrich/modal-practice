@@ -12,6 +12,9 @@
 
 .flex-child:first-child {
   background-color: #e3f5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .second-flex {

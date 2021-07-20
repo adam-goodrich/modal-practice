@@ -1,6 +1,7 @@
 import "./Login.css";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import Logo from "./logo.png";
 
 const Login = () => {
   let history = useHistory();
@@ -12,7 +13,9 @@ const Login = () => {
 
   return (
     <div className="flex-container">
-      <div className="flex-child"></div>
+      <div className="flex-child">
+        <img src={Logo} alt="Odessa Health Logo" />
+      </div>
       <div className="flex-child second-flex">
         <form className="log-in-form" onSubmit={submitted}>
           <h1 className="login-title">Login</h1>
