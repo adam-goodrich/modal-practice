@@ -10,8 +10,25 @@
   min-height: 500px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
 .flex-child:first-child {
   background-color: #e3f5ff;
+}
+
+.second-flex {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .log-in-form {

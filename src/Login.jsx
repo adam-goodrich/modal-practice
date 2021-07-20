@@ -37,6 +37,7 @@ const Login = () => {
             </button>
           </form>
         </div>
+        <HelpModal />
       </div>
     </div>
   );

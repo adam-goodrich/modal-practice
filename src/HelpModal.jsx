@@ -29,8 +29,8 @@ const HelpModal = () => {
   });
 
   return (
-    <div>
-      <div className="btn">
+    <div className="btn">
+      <div>
         <button type="button" className="open-btn">
           I want help
         </button>
