@@ -17,6 +17,11 @@
   font-size: 64px;
 }
 
+.hello {
+  font-size: 64px;
+  margin-left: 25px;
+}
+
 .btn {
   position: absolute;
   bottom: 10px;

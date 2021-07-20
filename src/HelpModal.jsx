@@ -8,16 +8,16 @@ const HelpModal = () => {
     const mainPopup = document.querySelector(".main-popup");
     const overlay = document.querySelector(".popup-overlay");
 
-    openButton.addEventListener("click", () => {
+    const slideIn = () => {
       popup.style.opacity = 1;
       popup.style.display = "flex";
       mainPopup.style.cssText =
         "animation: slide-in .5s ease; animation-fill-mode: forwards;";
       overlay.style.cssText =
         "animation: fade-in .5s ease; animation-fill-mode: forwards;";
-    });
+    };
 
-    overlay.addEventListener("click", () => {
+    const slideOut = () => {
       mainPopup.style.cssText =
         "animation: slide-out .5s ease; animation-fill-mode: forwards;";
       overlay.style.cssText =
@@ -25,7 +25,16 @@ const HelpModal = () => {
       setTimeout(() => {
         popup.style.display = "none";
       }, 500);
-    });
+    };
+
+    openButton.addEventListener("click", slideIn);
+
+    overlay.addEventListener("click", slideOut);
+
+    return () => {
+      openButton.removeEventListener("click", slideIn);
+      overlay.removeEventListener("click", slideOut);
+    };
   });
 
   return (

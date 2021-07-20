@@ -1,12 +1,20 @@
 import "./Login.css";
-import { Link } from "react-router-dom";
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
+  let history = useHistory();
+
+  function submitted(event) {
+    event.preventDefault();
+    return history.push("/BlankContent");
+  }
+
   return (
     <div className="flex-container">
       <div className="flex-child"></div>
       <div className="flex-child second-flex">
-        <form className="log-in-form">
+        <form className="log-in-form" onSubmit={submitted}>
           <h1 className="login-title">Login</h1>
           <label for="username" className="username-label">
             Username
@@ -30,11 +38,9 @@ const Login = () => {
             className="password-input"
             required></input>
           <br></br>
-          <Link to="/BlankContent">
-            <button type="submit" className="login-btn">
-              Sign In
-            </button>
-          </Link>
+          <button type="submit" className="login-btn">
+            Sign In
+          </button>
         </form>
       </div>
     </div>
