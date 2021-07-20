@@ -1,4 +1,5 @@
 import "./Login.css";
+import HelpModal from "./HelpModal";
 
 const Login = () => {
   return (

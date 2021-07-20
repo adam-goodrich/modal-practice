@@ -6,7 +6,8 @@
 
 .flex-child {
   flex: 1;
-  min-width: 500px;
+  min-width: 550px;
+  min-height: 500px;
 }
 
 .flex-child:first-child {
@@ -70,4 +71,5 @@
   background-color: #445480;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
